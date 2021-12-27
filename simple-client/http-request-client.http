@@ -1,0 +1,37 @@
+#server endpoints
+
+###server-bye
+GET http://localhost:8081/greeting/bye
+
+###server-hi
+GET http://localhost:8081/greeting/greet/{{name}}
+
+###server-multiple-pathvars
+GET http://localhost:8081/pathvars/tests/{{t1}}/{{t2}}
+
+###server-+pathvar -!
+GET http://localhost:8081/pathvars/state/{{state}}/check
+
+###server with query parameters - !
+GET http://localhost:8081/pathvars/data/{{day}}?p1="December"&p2="17"
+
+
+# client controller endpoints
+
+###client-controller-hi -!
+GET http://localhost:8080/sayHello/{{name}}
+
+###client-controller-bye -!
+GET http://localhost:8080/sayBye
+
+###client-controller-root
+GET http://localhost:8080/root
+
+
+###client controller test
+GET http://localhost:8080/test
+
+# low-level controller
+
+###low-level client: root -!
+GET http://localhost:8080/llc/root
